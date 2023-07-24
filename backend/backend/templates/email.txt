@@ -1,0 +1,10 @@
+Email from: {{ firt_name }} {{ last_name }}
+Sender email: {{ email }}
+Sender Phone Number: {{ phone_number }}
+
+Object: {{ subject }}
+{% if car != 'None' %}
+    Car: {{ car }}
+{% endif %}
+
+{{ message }}
