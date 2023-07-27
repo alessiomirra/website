@@ -140,5 +140,6 @@ frontend/src/bootstrap/
 
 live-part/node_modules/ 
 
+screen/
 client_secret.json
 resources.txt 

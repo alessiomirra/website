@@ -65,6 +65,8 @@ The site's homepage contain three main sections:
 2. Showcase Section 
 
 ![Showcase Image1](https://i.imgur.com/0EFc5Tw.png)
+
+
 ![Showcase Image2](https://i.imgur.com/ZWYmvpq.png)
 
 This section contains cars chosen by the dealer. 
@@ -85,6 +87,8 @@ To retrieve the cars to show in this section I make an Axios get request to an e
 #### Car Details Page
 
 ![Details Image1](https://i.imgur.com/3dQnf9R.png)
+
+
 ![Details Image2](https://i.imgur.com/YlVuwvE.png)
 
 #### About Page 
