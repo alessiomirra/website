@@ -44,6 +44,9 @@ export default({
                         }
                     })
                     .catch(error => {
+                        this.$router.push({
+                            name: 'error'
+                        })
                         this.error = true; 
                         this.email = ''; 
                         this.message = error.message; 
