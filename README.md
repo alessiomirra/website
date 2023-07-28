@@ -60,7 +60,7 @@ The site's homepage contain three main sections:
 
 1. Hero Section
 
-![Hero Image](https://i.imgur.com/1urs2Ce.png)
+![Hero Image](https://i.imgur.com/G2u0kRz.png)
 
 2. Showcase Section 
 

@@ -1,101 +1,104 @@
 <template>
 
-  <div class="main">
+  <div class="homepage">
 
-    <div class="top">
-    
-      <div class="navbar navbar-expand-lg bg-transparent">
-        <div class="container">
-          <a class="navbar-brand" href="#"><i class="fa-sharp fa-solid fa-car-side fa-xxl"></i> CarHub</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <router-link class="nav-link active" aria-current="page" :to="{name: 'store-page'}">Store Page</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link active" aria-current="page" :to="{name: 'about-page'}">About</router-link>
-              </li>
-            </ul>
+    <div class="main">
+
+      <div class="top">
+      
+        <div class="navbar navbar-expand-lg bg-transparent">
+          <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-sharp fa-solid fa-car-side fa-xxl"></i> CarHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <router-link class="nav-link active" aria-current="page" :to="{name: 'store-page'}">Store Page</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link active" aria-current="page" :to="{name: 'about-page'}">About</router-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="center container d-flex justify-content-between mt-5">
+          <div class="left pt-5">
+            <h2>Welcome to CarHub!</h2>
+            <h4>Find, book and buy your new car - <br>quick and super easy</h4>
+            <p id="slogan">Choose your new car and come to our store to see and try it!</p>
+            <div class="d-flex mt-5 buttons">
+              <router-link href="#" class="btn btn-primary" :to="{name: 'store-page'}">Store Page</router-link>
+              <a href="#showcase-section" class="btn btn-light ms-2">Showcase</a>
+            </div>
+          </div>
+          
+          <div class="right">
+            <img src="@/assets/images/heroCar.png" alt="#" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container text-center">
+        <div class="row cards-pic justify-content-center">
+          <div class="col-lg-4 mb-3">
+            <div class="pic p-3">
+              <div class="head">
+                <i class="fa-sharp fa-solid fa-car-side fa-2xl"></i>
+              </div>
+              <div class="body mt-2">
+                <h5>Find your new car</h5>
+                <p id="catchphrase">Find your new car among the many choices on our site</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <div class="pic p-3">
+              <div class="head">
+                <i class="fa-solid fa-building fa-2xl"></i>
+              </div>
+              <div class="body mt-2">
+                <h5>Come to see the car</h5>
+                <p id="catchphrase">Contact us and come to see cars in our physical store</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <div class="pic p-3">
+              <div class="head">
+                <i class="fa-solid fa-file fa-2xl"></i>
+              </div>
+              <div class="body mt-2">
+                <h5>Warranty</h5>
+                <p id="catchphrase">When you buy one of our cars you have a one year warranty</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="center container d-flex justify-content-between mt-5">
-        <div class="left pt-5">
-          <h2>Welcome to CarHub!</h2>
-          <h4>Find, book and buy your new car - <br>quick and super easy</h4>
-          <p class="text-muted">Choose your new car and come to our store to see and try it!</p>
-          <div class="d-flex mt-5 buttons">
-            <router-link href="#" class="btn btn-primary" :to="{name: 'store-page'}">Store Page</router-link>
-            <a href="#showcase-section" class="btn btn-light ms-2">Showcase</a>
-          </div>
-        </div>
-        <div class="right">
-          <img src="@/assets/images/heroCar.png" alt="#" loading="lazy">
-        </div>
-      </div>
-
-    
-
-    <div class="container text-center">
-      <div class="row cards-pic justify-content-center">
-        <div class="col-lg-4 mb-3">
-          <div class="pic p-3">
-            <div class="head">
-              <i class="fa-sharp fa-solid fa-car-side fa-2xl"></i>
-            </div>
-            <div class="body mt-2">
-              <h5>Find your new car</h5>
-              <p class="text-muted">Find your new car among the many choices on our site</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-3">
-          <div class="pic p-3">
-            <div class="head">
-              <i class="fa-solid fa-building fa-2xl"></i>
-            </div>
-            <div class="body mt-2">
-              <h5>Come to see the car</h5>
-              <p class="text-muted">Contact us and come to see cars in our physical store</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-3">
-          <div class="pic p-3">
-            <div class="head">
-              <i class="fa-solid fa-file fa-2xl"></i>
-            </div>
-            <div class="body mt-2">
-              <h5>Warranty</h5>
-              <p class="text-muted">When you buy one of our cars you have a one year warranty</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    </div>
-
-  </div>
-
-  <div class="container">
-    <hr>
-  </div>
-
-  <div class="showcase-section mb-4" id="showcase-section">
 
     <div class="container">
-      <h3>Showcase Section</h3>
-      <p class="text-muted">
-        These are our best cars. For more cars visit our <router-link :to="{name: 'store-page'}">store</router-link>!
-      </p>
-      <div>
-        <ShowcaseSection /> 
+      <hr>
+    </div>
+
+    <div class="showcase-section mb-4" id="showcase-section">
+
+      <div class="container">
+        <h3>Showcase Section</h3>
+        <p class="text-muted">
+          These are our best cars. For more cars visit our <router-link :to="{name: 'store-page'}">store</router-link>!
+        </p>
+        <div>
+          <ShowcaseSection /> 
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -112,17 +115,24 @@ export default {
   }, 
   mounted(){
     document.title = 'CarHub'; 
-  }
+  }, 
+  created(){
+
+  },
+
 }
 
 </script>
 
 <style scoped>
-.main{
+.homepage{
   width: 100%;
-  min-height: 100vh;
   opacity: 0;
   animation: fadeInAnimation 0.5s ease-in forwards; 
+}
+.main{
+  width: 100%;
+  min-height: 50vh;
 }
 .navbar-brand{
   color: #4361ee;
@@ -139,6 +149,9 @@ export default {
 }
 .left h4{
   font-weight:400;
+}
+#slogan #catchphrase{
+  color: #6c757d, 
 }
 .right{
   width: 50%;
@@ -161,11 +174,27 @@ export default {
   min-height: 150px;
 }
 
-
-
 .showcase-section{
   width: 100%;
   min-height: 100vh;
+}
+
+.top {
+  position: relative;
+  overflow: hidden;
+}
+
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, transparent 49%, #4361ee 50%);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: translateX(110%);
 }
 
 @keyframes fadeInAnimation {
@@ -178,6 +207,24 @@ export default {
 }
 
 @media (max-width: 1300px){
+  .main{
+    background-image: linear-gradient(to bottom, #4361ee, #ffffff);
+  }
+  .navbar-brand{
+    color: #ffffff;
+  }
+  .navbar-brand:hover{
+    color: #ffffff;
+  }
+  .navbar-brand:active{
+    color: #ffffff;
+  }
+  #slogan{
+    color: white;
+  }
+  #catchphrase{
+    color: black;
+  }
   .left{
     width: 100%;
     text-align: center;
@@ -191,6 +238,9 @@ export default {
   }
   .cards-pic{
     margin-left: 6%; 
+  }
+  .top::before {
+    background: transparent;
   }
 }
 </style>

@@ -3,17 +3,19 @@
         <Navbar />
 
         <div class="hero d-flex align-items-end">
-            <div class="container p-3">
-                <p>About us</p>
-                <h1 class="display-3">CarHub</h1>
-                <h1 class="display-5">Passion and Knowledge</h1>
+            <div class="container p-3 hero-text">
+                <div class="text">
+                    <p>About us</p>
+                    <h1 class="display-3">CarHub</h1>
+                    <h1 class="display-5">Passion and Knowledge</h1>
+                </div>
             </div>
         </div>
 
         <div class="container mt-3">
             <div class="row mb-3">
                 <div class="col-lg-6">
-                    <div class="text-center border rounded-5 p-3">
+                    <div class="text-center border rounded-5 p-3 info-text">
                         <p class="fs-5">
                             We are proud to offer a wide range of cars and services, including pre-delivery car inspection, warranty and assistance.
                         </p>
@@ -24,7 +26,7 @@
             <div class="row mb-3">
                 <div class="col-lg-6"></div>
                 <div class="col-lg-6">
-                    <div class="text-center border rounded-5 p-3">
+                    <div class="text-center border rounded-5 p-3 info-text">
                         <p class="text-muted">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet aliquet neque in fermentum. Vivamus arcu eros, suscipit at tincidunt eget, consectetur nec lectus. Mauris turpis erat, convallis vitae eros id, molestie faucibus arcu. Nunc magna massa, blandit at pharetra vel, tincidunt eu nulla. Donec sed dictum purus. Praesent scelerisque mi congue tincidunt rhoncus. Etiam eget rhoncus metus. Aliquam erat volutpat.
                         </p>
@@ -44,8 +46,8 @@
                 <div class="col-lg-12">
                     <div>
                         <h6 class="text-decoration-underline">Visit the store:</h6>
-                        <p>Company Street, City, Nation</p>
-                        <p>tel: (+39)333 128 1099</p>
+                        <p>{{ $store.state.address }}</p>
+                        <p>tel: {{ $store.state.number }}</p>
                         <router-link :to="{name:'contact'}" class="btn btn-sm btn-primary">Contact</router-link>
                     </div>
                 </div>
@@ -83,6 +85,13 @@ export default{
     background-image: url('@/assets/images/park-2.jpeg'); 
     background-size:cover;
     background-repeat: no-repeat;
+}
+.hero-text{
+    width: 100%;
+}
+.show{
+    transform: translateX(0);
+    opacity: 1;
 }
 .image-container{
     height: 400px;
