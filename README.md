@@ -187,6 +187,21 @@ This way, it is easier to update the informations because I only need to change 
 
 ---
 
+### CMS 
+
+In the backend part, I have created a small CMS, protected by authentication, which allows the seller to manage the content published on the website.
+This CMS has been created using only Django and its template system. The authentication system was implemented using _django.contrib.auth_.
+In this part of the site the dealer can: 
+1. Publish new cars
+2. Delete cars
+3. Update cars adverts
+4. Update company's informations 
+
+This CMS runs on localhost:8000, the same posrt of the backend and the REST API. 
+
+
+---
+
 ### Preview
 
 After cloning this repository you need to set up both Django and Vue 
