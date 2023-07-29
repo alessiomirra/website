@@ -5,9 +5,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('rest_framework.urls')), 
+    path('', include('cars.urls')), 
+    path('users/', include('rest_framework.urls')), 
     path('api/', include("cars.api.urls")), 
     path('newsletter/', include('newsletter.urls')), 
+    path('accounts/', include('django.contrib.auth.urls')), 
 ]
 
 if settings.DEBUG: 

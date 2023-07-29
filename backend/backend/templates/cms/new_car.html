@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }} - New Car{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <form method="POST" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+
+        <div class="d-flex justify-content-between mt-3">
+            <h3 class="mt-3 mb-3">ADD A NEW CAR</h3>
+            <input type="submit" class="btn btn- btn-primary" value="Create">
+        </div>
+
+        <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.make.errors }}</p>
+                            <label for="{{ form.make.id_for_label }}" class="form-label">Make</label>
+                            {{ form.make }}
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.model.errors }}</p>
+                            <label for="{{ form.model.id_for_label }}" class="form-label">Model</label>
+                            {{ form.model }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.version.id_for_label }}" class="form-label">Version</label>
+                            {{ form.version }}
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger error">{{ form.showcase.errors }}</p>
+                            {{ form.showcase }}
+                            <label for="{{ form.showcase.id_for_label }}" class="form-check-label">Add to Showcase section</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.slug.errors }}</p>
+                            <label for="{{ form.slug.id_for_label }}" class="form-label">Slug</label>
+                            {{ form.slug }}
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.price.errors }}</p>
+                            <label for="{{ form.price.id_for_label }}" class="form-label">Price</label>
+                            <div class="input-group">
+                                <div class="input-group-text">€</div>
+                                {{ form.price }}
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.year.errors }}</p>
+                            <label for="{{ form.year.id_for_label }}" class="form-label">Year</label>
+                            {{ form.year }}
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.gear.errors }}</p>
+                            <label for="{{ form.gear.id_for_label }}" class="form-label">Gear</label>
+                            {{ form.gear }}
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.fuel.errors }}</p>
+                            <label for="{{ form.fuel.id_for_label }}" class="form-label">Fuel</label>
+                            {{ form.fuel }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.power.errors }}</p>
+                            <label for="{{ form.power.id_for_label }}" class="form-label">Power</label>
+                            <div class="input-group">
+                                {{ form.power }}
+                                <div class="input-group-text">kW</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-danger">{{ form.mileage.errors }}</p>
+                            <label for="{{ form.mileage.id_for_label }}" class="form-label">Mileage</label>
+                            <div class="input-group">
+                                {{ form.mileage }}
+                                <div class="input-group-text">km</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="{{ form.optionals.id_for_label }}" class="form-label">Optionals</label>
+                            {{ form.optionals }}
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="{{ form.description.id_for_label }}" class="form-label">Description</label>
+                            {{ form.description }}
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="{{ form.miniature.is_for_label }}" class="form-label">Car Miniature</label>
+                            {{ form.miniature }}
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </form>
+  </div>  
+{% endblock content %}

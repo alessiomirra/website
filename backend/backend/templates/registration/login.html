@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }} - Login Personal Area{% endblock title %}
+
+{% block content %}
+
+    <div class="main bg-dark text-white">
+
+        <div class="d-flex justify-content-center align-items-center">
+
+            <div class="border rounded-3 p-5">
+                <h3 class="text-center">Login</h3>
+                <p class="text-center">Access your personal area</p>
+
+
+                <form method="POST" class="text-center">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <p class="text-center mt-5">Aren't you the site's owner? Come back to the <a href="http://localhost:8080">homepage</a></p>
+
+
+    </div>
+
+{% endblock content %}

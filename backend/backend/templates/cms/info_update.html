@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ block.super }} - Company Infoes{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="text-center mt-3 mb-3">
+            <h4>Company's Informations</h4>
+
+            <div class="mt-5">
+                <table class="table border">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Address</th>
+                            <td>{{ object.address }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone Number</th>
+                            <td>{{ object.phoneNumber }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>{{ object.email }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ID Code</th>
+                            <td>{{ object.idCode }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn btn-primary" id="show-button">Update Company Informations</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="form-container mb-5">
+                <form method="POST" class="form-control rounded-4 p-3">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <p>{{ form.address.errors }}</p>
+                                <label for="{{ form.address.id_for_label }}" class="form-label">Address</label>
+                                {{ form.address }}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <p>{{ form.phoneNumber.errors }}</p>
+                                <label for="{{ form.phoneNumber.id_for_label }}" class="form-label">Phone Number</label>
+                                {{ form.phoneNumber }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <p>{{ form.email.errors }}</p>
+                                <label for="{{ form.emal.id_for_label }}" class="form-label">Email</label>
+                                {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <p>{{ form.idCode.errors }}</p>
+                                <label for="{{ form.idCode.id_for_label }}" class="form-label">ID Code</label>
+                                {{ form.idCode }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-sm btn-primary">Update Informations</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    {% block script %}
+        <script src="{% static 'js/base.js' %}"></script>
+    {% endblock script %}
+
+    <script>
+        const formContainer = document.querySelector('.form-container');
+        const showButton = document.querySelector('#show-button');
+            
+        showButton.addEventListener('click', function() {
+            if (formContainer.style.display === 'none') {
+                formContainer.style.display = 'block';
+            } else {
+                formContainer.style.display = 'none';
+            }
+        });
+    </script>
+
+{% endblock content %}

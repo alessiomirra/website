@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }} - Delete {{ object }}{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="mt-5 mb-5 text-center">
+            <h4 class="mb-5">Are you sure you want to delete <span class="text-decoration-underline">{{ object }}</span>?</h4>
+
+            <form method="POST" class="text-center">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+
+        </fiv>
+
+    </div>
+
+
+{% endblock content %}

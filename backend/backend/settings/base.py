@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
+    'http://localhost:8000', 
 ]
 
 # Application definition
@@ -118,6 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    'backend/static', 
+]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'uploads'
@@ -134,3 +139,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+# AUTH 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = "/"
