@@ -197,7 +197,7 @@ In this part of the site the dealer can:
 3. Update cars adverts
 4. Update company's informations 
 
-This CMS runs on localhost:8000, the same posrt of the backend and the REST API. 
+This CMS runs on localhost:8000, the same port of the backend and the REST API. 
 
 
 ---
